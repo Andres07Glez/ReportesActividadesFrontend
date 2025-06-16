@@ -1,1 +1,228 @@
-<p>thesis-dir works!</p>
+<div class="container mt-4 mb-5 fondo">
+  <div class="row">
+    <div class="col-12 titulo text-white">
+      <b>OPORTUNIDADES PARA EL DESARROLLO DOCENTE</b>
+    </div>
+  </div>
+  <div class="row">
+    <button
+      type="button"
+      class="btn btn-light mt-3 letra2"
+      data-bs-toggle="modal"
+      data-bs-target="#modalOpor"
+      id="btnNew"
+    >
+      <b>Agregar</b>
+    </button>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="container mt-4">
+        <div class="contenedor-fijo">
+          <div class="card shadow">
+            <div class="card-body">
+              <div class="container mt-5">
+                <!-- <h1 class="mb-4">Información del Curso</h1> -->
+                <!-- Pseudo tabla hecha con divs -->
+                <div id="dataDiv" class="table-div">
+                  <!-- Encabezado -->
+                  <div class="row table-header">
+                    <div class="col text-center">Oportunidades</div>
+                  </div>
+                  <!-- Cuerpo: las filas se agregarán dinámicamente -->
+                  <div id="dataBody">
+                    <div class="row align-items-center py-2 border-bottom">
+                      <div class="col">
+                        <p
+                          href="#"
+                          class="text-primary"
+                          data-bs-toggle="modal"
+                          data-bs-target="#modalOporEdit"
+                        >
+                          Integración de Tecnología en el Aula: El profesor de
+                          Ciencias Sociales utiliza una plataforma educativa
+                          para compartir materiales de estudio, realizar
+                          evaluaciones en línea y fomentar discusiones
+                          virtuales. Esto ha reducido la carga administrativa y
+                          permitido a los estudiantes acceder a recursos en
+                          cualquier momento.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="row align-items-center py-2 border-bottom">
+                      <div class="col">
+                        <p>
+                          Programas de Capacitación Docente: La universidad
+                          organiza talleres mensuales sobre pedagogía activa y
+                          el uso de herramientas digitales. La profesora de
+                          Matemáticas ha aplicado estas técnicas, logrando un
+                          incremento en la participación estudiantil y en los
+                          resultados académicos.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="row align-items-center py-2 border-bottom">
+                      <div class="col">
+                        <p>
+                          Colaboración entre Departamentos: El departamento de
+                          Ingeniería y el de Diseño Gráfico colaboraron para
+                          desarrollar un proyecto interdisciplinario en el que
+                          los estudiantes construyeron prototipos innovadores,
+                          integrando conceptos de ambas áreas.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="row align-items-center py-2 border-bottom">
+                      <div class="col">
+                        <p>
+                          Flexibilidad Académica: El profesor de Historia
+                          implementó el método de clases invertidas, donde los
+                          estudiantes revisan materiales antes de la sesión
+                          presencial y luego participan en discusiones y
+                          actividades prácticas durante la clase. Esto ha
+                          mejorado la comprensión de los temas.
+                        </p>
+                      </div>
+                    </div>
+                    <div class="row align-items-center py-2 border-bottom">
+                      <div class="col">
+                        <p>
+                          Apoyo Institucional: La universidad otorga un
+                          reconocimiento anual al docente destacado,
+                          incentivando la innovación y la excelencia educativa.
+                          Esto ha motivado al equipo docente a mejorar
+                          continuamente sus estrategias de enseñanza.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Modal para Actualizar y Eliminar -->
+                <div
+                  class="modal fade"
+                  id="modalOporEdit"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <!-- Encabezado del modal -->
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                          Ingresar Oportunidades
+                        </h1>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Cerrar"
+                        ></button>
+                      </div>
+                      <!-- Cuerpo del modal -->
+                      <div class="modal-body">
+                        <form id="courseForm">
+                          <div class="mb-3">
+                            <label for="oportunidades" class="col-form-label"
+                              >Oportunidades:</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="oportunidades"
+                              placeholder="Ingrese Texto"
+                              required
+                              disabled
+                            />
+                          </div>
+                        </form>
+                      </div>
+                      <!-- Pie del modal -->
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary btn-danger"
+                        >
+                          Eliminar
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-primaryn btn-success"
+                          id="btnSave"
+                        >
+                          Actualizar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Modal para Agregar -->
+                <div
+                  class="modal fade"
+                  id="modalOpor"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <!-- Encabezado del modal -->
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                          Ingresar Oportunidades
+                        </h1>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                          aria-label="Cerrar"
+                        ></button>
+                      </div>
+                      <!-- Cuerpo del modal -->
+                      <div class="modal-body">
+                        <form id="courseForm">
+                          <div class="mb-3">
+                            <label for="oportunidades" class="col-form-label"
+                              >Oportunidades:</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="oportunidades"
+                              placeholder="Ingrese Texto"
+                              required
+                            />
+                          </div>
+                        </form>
+                      </div>
+                      <!-- Pie del modal -->
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-secondary"
+                          data-bs-dismiss="modal"
+                        >
+                          Cancelar
+                        </button>
+                        <button
+                          type="button"
+                          class="btn btn-primary"
+                          id="btnSave"
+                        >
+                          Guardar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Botón para abrir el modal para crear un nuevo registro -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
